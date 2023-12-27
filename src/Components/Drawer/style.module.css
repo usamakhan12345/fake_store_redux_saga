@@ -1,0 +1,16 @@
+.deleteAllBtn{
+    background-color: red;  
+    color: white;
+    width: 90px;
+    height: 40px;
+    border : 2px solid red;
+    margin: auto;
+    cursor: pointer;
+}
+.deleteAllBtn:active{
+    opacity: 0.5;
+}
+.btnContainer{
+    display: flex;
+    margin-top: 10px;
+}
