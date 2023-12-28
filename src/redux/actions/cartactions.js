@@ -1,4 +1,4 @@
-import {ADD_TO_CART , REMOVE_CART ,DELETE_ALL_CARTS  } from "../constants"
+import {ADD_TO_CART , REMOVE_CART ,DELETE_ALL_CARTS , SET_PRODUCTS  } from "../constants"
 
 
 export const addToCart = (data)=>{
@@ -25,3 +25,9 @@ export const removeCart = (data)=>{
     }
 }
 
+export const setProducts = (data)=>{
+    return {
+        type : SET_PRODUCTS ,
+        data
+    }
+}

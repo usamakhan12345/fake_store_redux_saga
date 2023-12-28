@@ -9,9 +9,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { FaCartPlus } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
 import { useSelector } from 'react-redux';
+import {useGetPokemonByNameQuery} from "../../RTKQuery/apiSlice"
 export default function ButtonAppBar({ setOpen }) {
-    const cartData = useSelector((state)=> state.cartData)
-    console.log(cartData.length)
+    const cartData = useSelector((state) => state.reducer.cartData)
+
+
+    console.log(cartData?.length)
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
@@ -29,7 +32,7 @@ export default function ButtonAppBar({ setOpen }) {
                         Fake Store
                     </Typography>
                     <Button onClick={() => setOpen(true)} sx={{ fontSize: 25 }} color="inherit"> 
-                     <Badge style={{fontSize : 30  }}  badgeContent={cartData.length} color="red">
+                     <Badge style={{fontSize : 30  }}  badgeContent={cartData?.length} color="red">
                     <FaCartPlus style={{color : '#ffffff'}} />
                     </Badge> 
                     </Button>

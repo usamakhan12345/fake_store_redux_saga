@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import {addToCart} from "../../redux/actions/cartactions"
 
-export default function FolderList({cartData , AddToCart , RemoveFromCart}) {
+export default function FolderList({cartData , AddToCart , RemoveFromCart}) { 
     console.log(cartData)
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
