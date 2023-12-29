@@ -3,7 +3,6 @@ import { ADD_TO_CART, REMOVE_CART, DELETE_ALL_CARTS , SEARCH_ITEM } from "../con
 
 
 export const cartData = (data = [], action) => {
-    console.log("initialState----->", action.data)
     switch (action.type) {
         case ADD_TO_CART:
             console.log("reducer add to cart called")

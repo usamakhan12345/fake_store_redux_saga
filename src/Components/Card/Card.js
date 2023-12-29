@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard({product , AddToCart}) {
+export default function MediaCard({product , AddToCart , DeleteCart}) {
   return (
     <Card sx={{ width: 320,marginBottom : 10 }}>
       <CardMedia
@@ -23,9 +23,15 @@ export default function MediaCard({product , AddToCart}) {
          
         </Typography>
       </CardContent>
+      <div style={{display : 'flex'}}>
+
       <CardActions>
         <Button onClick={()=>AddToCart(product)} sx={{color : "blue"}}  size="small">Add to cart</Button>
       </CardActions>
+      <CardActions>
+        <Button onClick={()=>DeleteCart(product.id)} sx={{color : "blue"}}  size="small">Delete Cart</Button>
+      </CardActions>
+      </div>
     </Card>
   );
 }
